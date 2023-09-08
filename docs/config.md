@@ -169,10 +169,11 @@ settings:
             enabled: false
             # WorldNames where we need to force the spawn location
             # Case-sensitive!
-            worlds: 
-            - world
-            - world_nether
-            - world_the_end
+            worlds:
+            - survival
+            - dalen
+            - dalen_nether
+            - dqlen_the_end
         # This option will save the quit location of the players.
         SaveQuitLocation: false
         # To activate the restricted user feature you need
@@ -200,7 +201,7 @@ settings:
         allowMovement: false
         # After how many seconds should players who fail to login or register
         # be kicked? Set to 0 to disable.
-        timeout: 30
+        timeout: 0
         # Regex pattern of allowed characters in the player name.
         allowedNicknameCharacters: '[a-zA-Z0-9_]*'
         # How far can unregistered players walk?
@@ -313,9 +314,9 @@ settings:
     useWelcomeMessage: true
     # Broadcast the welcome message to the server or only to the player?
     # set true for server or false for player
-    broadcastWelcomeMessage: false
+    broadcastWelcomeMessage: true
     # Should we delay the join message and display it once the player has logged in?
-    delayJoinMessage: false
+    delayJoinMessage: true
     # The custom join message that will be sent after a successful login,
     # keep empty to use the original one.
     # Available variables:
@@ -399,7 +400,7 @@ Hooks:
     useEssentialsMotd: false
 Protection:
     # Enable some servers protection (country based login, antibot)
-    enableProtection: false
+    enableProtection: true
     # Apply the protection also to registered usernames
     enableProtectionRegistered: true
     geoIpDatabase:
